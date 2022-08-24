@@ -41,6 +41,7 @@ resource "azurerm_subnet" "main" {
 module "marketplace_agreement" {
   source = "../terraform-azurerm-marketplace_agreement"
 }
+
 module "virtual_machine" {
   depends_on = [
     module.marketplace_agreement
